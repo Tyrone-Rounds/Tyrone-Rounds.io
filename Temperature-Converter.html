@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature and Other Converters</title>
+	<link rel="stylesheet" type="text/css" href="converter.css">
+</head>
+<body>
+	<h1>Temperature Converter</h1><br>
+	<a href="Weight-Converter.html">Weight Converter</a>
+	<a href="measureConverter-index.html">Length Converter</a><br><br>
+	<input type="button" onClick ="history.go(0)" value="Reload"><br><br>
+
+	<form>
+		Convert Fahrenheit to Celsius. Enter Fahrenheit here:
+		<input type="text" name="fahrenheit_to_Celsius" id="fahrenheit_to_Celsius">fahrenheit.
+		<button type="button" onclick="convertToCelsius()">Convert to Celsius</button>
+	</form>
+		<p id="Cels"></p><br>
+
+	<form>
+		Convert Celsius to Fahrenheit. Enter Celsius here:
+		<input type="text" name="Celsius_to_Fahrnht" id="Celsius_to_Fahrnht">Celsius.
+		<button type="button" onclick="convertToFahrnht()">Convert to Fahrenheit</button>															
+	</form>
+	<p id="Fahren_result"></p><br>
+	
+
+	
+	<form>
+		Convert Fahrenheit to Kelvin. Enter Fahrenheit here:
+		<input type="text" name="Fahrnht_to_Kelvin" id="Fahrnht_to_Kelvin">Fahrenheit.
+		<button type="button" onclick="convertToKelvin()">Convert to Kelvin</button>															
+	</form>
+	<p id="Kelvin_result"></p><br>
+
+	<form>
+		Convert Celsius to Kelvin. Enter Celsius here:
+		<input type="text" name="Cel_to_Kelvin" id="Cel_to_Kelvin">Celsius.
+		<button type="button" onclick="convertToKel()">Convert to Kelvin</button>															
+	</form>
+	<p id="Kelvind_result"></p><br>
+
+	<form>
+		Convert Kelvin to Celsius. Enter Kelvin here:
+		<input type="text" name="Kel_to_Celsius" id="Kel_to_Celsius">Kelvin.
+		<button type="button" onclick="convertToCelsus()">Convert to Celsius</button>
+	</form>
+	<p id = "KeltoCel_result"></p>
+
+	<form>
+		Convert Kelvin to Fahrenheit. Enter Kelvin here:
+		<input type="text" name="Kel_to_Frnht" id="Kel_to_Frnht">Kelvin.
+		<button type="button" onclick="convertKToFrnht()">Convert to Fahrenheit</button>
+	</form>
+	<p id = "KeltoFrnht_result"></p>
+
+
+	<script type="text/javascript">
+
+		function convertKToFrnht(){
+			var the_Kel_dgrs = document.getElementById("Kel_to_Frnht").value;
+ 			var KelFahr = document.querySelector("#KeltoFrnht_result");
+ 			KelFahr.innerHTML = Math.ceil(((the_Kel_dgrs -273.15) * (9/5) + 32)) + " Fahrenheit degrees.";
+		}
+		function convertToCelsus(){
+			var the_Kel_degrees = document.getElementById("Kel_to_Celsius").value;
+ 			var KelCel = document.querySelector("#KeltoCel_result");
+ 			KelCel.innerHTML = Math.ceil((the_Kel_degrees -273.15)) + " Celsius degrees";
+		}
+
+		function convertToKel(){
+			var the_Cel_degrees = document.getElementById("Cel_to_Kelvin").value;
+ 			var Kelv_result = document.querySelector("#Kelvind_result");
+ 			Kelv_result.innerHTML = Math.floor(((the_Cel_degrees -0) + 273.15)) + " Kelvin";
+		}
+
+		function convertToKelvin(){
+			var the_fahrht_degrees = document.getElementById("Fahrnht_to_Kelvin").value;
+ 			var Kel_result = document.querySelector("#Kelvin_result");
+ 			Kel_result.innerHTML = Math.floor(((the_fahrht_degrees -0)+ 459) *(5/9)) + " Kelvin" ;
+		}
+
+		function convertToCelsius(){
+			var the_fahrn_degrees = document.getElementById("fahrenheit_to_Celsius").value;
+ 			var Cels_result = document.querySelector("#Cels");
+ 			Cels_result.innerHTML = Math.ceil((the_fahrn_degrees - 32)*(9/5)) + " degrees Celsius" ;
+		}
+
+		function convertToFahrnht(){
+			var the_Cels_degrees = document.getElementById("Celsius_to_Fahrnht").value
+ 			var Fahrnht_result = document.querySelector("#Fahren_result");
+ 			Fahrnht_result.innerHTML = ((the_Cels_degrees *1.8)+(32)) + " degrees Fahrenheit" ;
+		}
+
+	</script>
+</body>
+</html>

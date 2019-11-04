@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length Converter</title>
+	<link rel="stylesheet" type="text/css" href="converter.css">
+</head>
+<body>
+	<h1>Length Converter</h1><br>
+	
+	<a href= "Volume_converter.html">Volume converter</a></n>
+	<a href = "Weight-Converter.html"> Weight converter</a></n>
+	<a href = "Temperature-Converter.html">Temperature converter</a><br><br>
+	<input type="button" onClick ="history.go(0)" value="Reload"><br>
+
+	<form>
+		Convert inches to centimeters. Enter the inches here:<input type ="text" name="inches_to_cm" id="inches_to_cm">inches
+		<button type="button" onclick="convertToCm()">Convert to centimeters</button>
+	</form>
+		<p id="converted-inches"></p><br>
+
+	<form>
+	Convert centimeters to inches. Enter the centimeters here:<input type="text" name="cm_to_inches" id="cm_to_inches">centimeters
+	<button type="button" onclick="convertToInches()">Convert to inches</button>
+	</form>
+
+	<p id="theinches"></p><br>
+
+	<form>
+		Convert yards to Meters. Enter the yards here:<input type="text" name="yard_to_meter" id="yard_to_meter">yards
+		<button type="button" onclick="convertToMeters()">Convert to Meters</button>
+	</form>
+	<p id="meters_from_yards"></p><br>
+	<form>
+		Convert meters to yards. Enter the meters here:<input type="text" name="meters_to_yards" id="meters_to_yards">meters
+		<button type="button" onclick="convertToYards()">Convert to yards</button>
+	</form>
+		<p id="yards_from_meters"></p><br>
+
+	<form>
+		Convert miles to kilometers. Enter the miles here:<input type="text" name="miles_to_km" id="miles_to_km">miles
+		<button type="button" onclick="convertToKilometers()">Convert to Kilometers</button>
+	</form>
+		<p id="converted-miles"></p><br>
+
+	<form>
+		Convert kilometers to miles. Enter the kilometers here:<input type="text" name="km_to_miles" id="km_to_miles">kilometers
+		<button type="button" onclick="convertToMiles()">Convert to miles</button>
+	</form>
+
+		<p id="themiles"></p><br>
+
+	<form>
+		Convert square feet to square meters. Enter the square feet here:<input type="text" name="sqft_to_sqm" id="sqft_to_sqm">square feet
+		<button type="button" onclick="convertTosqmeters()">Convert to square meters </button>
+	</form>
+
+		<p id="the_calc_sqmtrs"></p><br>
+	
+
+	
+	
+	<form>
+		Convert square meters to square feet. Enter the square meters here:<input type="text" name="smts_to_sft" id="smtrs_to_sft">square meters
+		<button type="button" onclick="convertToSqft()">Convert to square feet</button>
+	</form>
+	
+	
+	<p id="the_new_sft"></p>
+
+
+
+
+	<script type="text/javascript">
+		function convertToMeters(){
+			var theyards = document.getElementById("yard_to_meter").value;
+			var theconvertedvalue = document.getElementById("meters_from_yards");
+			theconvertedvalue.innerHTML = theyards*.9144 + " meters.";
+			
+		}
+
+		function convertToYards(){
+			var themeters = document.getElementById("meters_to_yards").value;
+			var theconvertedvalue = document.getElementById("yards_from_meters");
+			theconvertedvalue.innerHTML = themeters*1.09361 + " yards.";
+			
+		}
+
+		function convertToKilometers(){
+			var the_miles = document.getElementById("miles_to_km").value;
+			var theconvertedmiles = document.getElementById("converted-miles");
+			theconvertedmiles.innerHTML = the_miles*1.60934 + " kilometers.";
+			 		
+		}
+
+		function convertToCm(){
+			var the_miles = document.getElementById("inches_to_cm").value;
+			var theconvertedinches = document.getElementById("converted-inches");
+			theconvertedinches.innerHTML = the_miles*2.54 + " centimeters.";
+			 		
+		}
+
+		
+		
+		function convertToMiles(){
+			var thekms = document.getElementById("km_to_miles").value;
+			var convertedkmtomile = document.getElementById("themiles");
+			convertedkmtomile.innerHTML = thekms*.621371 + " miles.";
+			
+		}
+
+		function convertToInches(){
+			var theinchs = document.getElementById("cm_to_inches").value;
+			var convertedcmtoinch = document.getElementById("theinches");
+			convertedkmtomile.innerHTML = theinchs*.393701 + "inches.";
+			
+		}
+
+		
+
+		function convertTosqmeters(){
+			var the_sqft = document.getElementById("sqft_to_sqm").value;
+			var theconvertedsqmtrs = document.getElementById("the_calc_sqmtrs");
+			theconvertedsqmtrs.innerHTML = Math.floor(the_sqft*.092903) + " square meters.";
+		}
+
+		
+
+		function convertToSqft(){
+			var thesq_mts = document.getElementById("smtrs_to_sft").value;
+			var thenewsq_ft = document.getElementById("the_new_sft");
+			thenewsq_ft.innerHTML = (thesq_mts*10.76) + " square feet.";
+			
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+

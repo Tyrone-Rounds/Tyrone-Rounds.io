@@ -1,0 +1,14 @@
+<form>
+		Convert liters to ounces. Enter ounces here:
+		<input type="text" name="Ltr_to_Oz" id="Ltr_to_Oz">liters.
+		<button type="button" onclick="convertLtrToOz()">Convert to Ounces</button>
+	</form>
+	<p id = "LtrToOz_result"></p>
+
+
+
+function convertLtrToOz(){
+			var the_Oz = document.getElementById("Ltr_to_Oz").value;
+ 			var  theLiter_result = document.querySelector("#LtrToOz_result");
+ 			theLiter_result.innerHTML = the_Oz/33.814 + " liters.");
+		}

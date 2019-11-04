@@ -1,0 +1,133 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>Volume Converter</title>
+	<link rel="stylesheet" type="text/css" href="converter.css">
+</head>
+<body>
+	<h1>Volume Converter</h1><br>
+	<a href = "measureConverter-index.html">Length converter</a></n></n>
+	<a href="Weight-Converter.html">Weight Converter</a></n></n></n>
+	<a href = "Temperature-Converter.html">Temperature converter</a><br><br>
+	<input type="button" onClick ="history.go(0)" value="Reload"><br>
+
+	<form>
+		Convert liters to ounces. Enter liters here:
+		<input type="text" name="Ltr_to_Oz" id="Ltr_to_Oz">liters.
+		<button type="button" onclick="convertLtrToOz()">Convert to Ounces</button>
+	</form>
+	<p id = "LtrToOz_result"></p><br>
+
+	<form>
+		Convert ounces to liters. Enter ounces here:
+		<input type="text" name="Oz_to_Ltr" id="Oz_to_Ltr">ounces.
+		<button type="button" onclick="convertOzToLtr()">Convert to Liters</button>
+	</form>
+	<p id = "ozToLtr_result"></p><br>
+
+	<form>
+		Convert liters to cups. Enter liters here:
+		<input type="text" name="Ltr_to_cps" id="Ltr_to_cps">liters.
+		<button type="button" onclick="convertLtrTocps()">Convert to Cups</button>
+	</form>
+	<p id = "LtrTocps_result"></p><br>
+
+	<form>
+		Convert cups to liters. Enter cups here:
+		<input type="text" name="Cps_to_Ltrs" id="Cps_to_Ltrs">cups.
+		<button type="button" onclick="convertCpsToLtr()">Convert to Liters</button>
+	</form>
+	<p id = "CpsToLtr_result"></p><br>
+
+	<form>
+		Convert pints to liters. Enter pints here:
+		<input type="text" name="Pnts_to_Ltrs" id="Pnts_to_Ltrs">Pints.
+		<button type="button" onclick="convertPntsToLtr()">Convert to Liters</button>
+	</form>
+	<p id = "PntsToLtr_result"></p><br>
+
+	<form>
+		Convert liters to Pints. Enter liters here:
+		<input type="text" name="Ltrs_to_Pints" id="Ltrs_to_Pints">Liters.
+		<button type="button" onclick="convertLtrsToPints()">Convert to Pints</button>
+	</form>
+	<p id = "LtrPint_result"></p><br>
+
+	<form>
+		Convert liters to gallons. Enter liters here:
+		<input type="text" name="Ltrs_to_Galns" id="Ltrs_to_Galns">Liters.
+		<button type="button" onclick="convertLtrsToGallons()">Convert to Gallons</button>
+	</form>
+	<p id = "LtrGalln_result"></p><br>
+
+	<form>
+		Convert gallons to liters. Enter gallons here:
+		<input type="text" name="Galns_to_Ltrs" id="Galns_to_Ltrs">Gallons.
+		<button type="button" onclick="convertGallonsToLtrs()">Convert to Liters</button>
+	</form>
+	<p id = "GalnToLtr_result"></p><br>
+
+	<form>
+		Convert pints to gallons. Enter pints here:
+		<input type="text" name="Pints_to_Glns" id="Pints_to_Glns">pints.
+		<button type="button" onclick="convertPintsToGlns()">Convert to Gallons</button>
+	</form>
+	<p id = "PntToGlns_result"></p>
+
+	<script type="text/javascript">
+
+		function convertPintsToGlns(){
+			var the_Pnts_Galns = document.getElementById("Pints_to_Glns").value;
+ 			var  thePntsToGln_result=document.querySelector("#PntToGlns_result");
+ 			thePntsToGln_result.innerHTML = the_Pnts_Galns*.125 + " gallon.";
+		}
+
+		function convertGallonsToLtrs(){
+			var the_Ltr_Galns = document.getElementById("Galns_to_Ltrs").value;
+ 			var  theGlntoLtr_result=document.querySelector("#GalnToLtr_result");
+ 			theGlntoLtr_result.innerHTML = the_Ltr_Galns*3.785 + " liters.";
+		}
+
+		function convertLtrsToGallons(){
+			var the_Ltr_Galns = document.getElementById("Ltrs_to_Galns").value;
+ 			var  theLiterGalns_result =document.querySelector("#LtrGalln_result");
+ 			theLiterGalns_result.innerHTML = the_Ltr_Galns*.264172 + " gallons.";
+		}
+
+		function convertLtrsToPints(){
+			var the_Ltr_Pnts = document.getElementById("Ltrs_to_Pints").value;
+ 			var  theLiterPnts_result = document.querySelector("#LtrPint_result");
+ 			theLiterPnts_result.innerHTML = the_Ltr_Pnts*2.113 + " Liters.";
+		}
+
+		function convertPntsToLtr(){
+			var the_Pnts_ltr = document.getElementById("Pnts_to_Ltrs").value;
+ 			var  theLiterPnts_result = document.querySelector("#PntsToLtr_result");
+ 			theLiterPnts_result.innerHTML = the_Pnts_ltr*.473176 + " Liters.";
+		}
+
+		function convertCpsToLtr(){
+			var the_Cps_ltr = document.getElementById("Cps_to_Ltrs").value;
+ 			var  theLiterCps_result = document.querySelector("#CpsToLtr_result");
+ 			theLiterCps_result.innerHTML = the_Cps_ltr/4.22675 + " cups.";
+		}
+			function convertLtrTocps(){
+			var the_Liter_cps = document.getElementById("Ltr_to_cps").value;
+ 			var  theLiterCps_result = document.querySelector("#LtrTocps_result");
+ 			theLiterCps_result.innerHTML = the_Liter_cps * 4.22675 + " cups.";
+		}
+
+			function convertOzToLtr(){
+			var the_oz_Liter = document.getElementById("Oz_to_Ltr").value;
+ 			var  theLiter_result = document.querySelector("#ozToLtr_result");
+ 			theLiter_result.innerHTML = the_oz_Liter * .02957 + " liters.";
+		}
+
+		function convertLtrToOz(){
+			var the_ltr_oz = document.getElementById("Ltr_to_Oz").value;
+ 			var  theOz_result = document.querySelector("#LtrToOz_result");
+ 			theOz_result.innerHTML = the_ltr_oz*33.814 + " ounces.";
+		}
+	</script>	
+</body>
+</html>
