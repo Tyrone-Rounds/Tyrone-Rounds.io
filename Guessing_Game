@@ -7,16 +7,8 @@
 
  <body>
   <h1>Guessing Game 1</h1>
-   <!--<figure>
-    <figcaption>Listen to this while you play:</figcaption>
-    <audio
-        controls
-        src="/https://www.youtube.com/watch?v=FnH_zwVmiuE">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-   </figure> -->
-  <form method>
+  
+  <form>
     Try to guess the number.
     <input type = "text" id = "num1">
     <button type = "button" onclick = "patOnBack()" required>Check</button>
@@ -33,25 +25,24 @@
   <script type = "text/javascript">
 	
   
-   let digit2 = Math.ceil(Math.random() *24);
+   var digit2 = Math.ceil(Math.random() *24);
    function patOnBack(){
 	
-	let yourGuess = document.getElementById("num1").value;
-		if(yourGuess === ''){document.getElementById('answer').innerHTML = 'You must enter a value!';
-		}
-	
-		else if(yourGuess < digit2){/*alert('That is too low');*/
+	var yourGuess = document.getElementById("num1").value;
+		if(yourGuess === ''){
+		document.getElementById('answer').innerHTML = 'You must enter a value!';
+		} else if(yourGuess < digit2){
 			document.getElementById('answer').innerHTML = yourGuess + ' is too low';
 		
 			}
-		else if(yourGuess > digit2){/*alert('That is too high');*/
+		else if(yourGuess > digit2){
 			document.getElementById('answer').innerHTML = yourGuess +   ' is too high';
 			
 	 }
 		else{ document.getElementById('answer').innerHTML = '';
-			/*alert(yourGuess + ' is correct! YOU WIN!!'); */
+			
 			document.getElementById('answer').innerHTML = yourGuess + ' is correct!' + 
-			'<h1><blink> YOU WIN!!</blink></h1>';
+			'<h1> YOU WIN!!</h1>';
 		
 		}
 
