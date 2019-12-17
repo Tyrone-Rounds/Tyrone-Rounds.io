@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html>
- 
- <head>
-  <title>Experiment</title>
-	 
- </head>
+<head>
+	<title>Add Text</title>
+</head>
+<body>
+	<form>
+		Enter a number here:
 
- <body>
-  <h1>Guessing Game 1</h1>
-  
-  <form>
-    Try to guess the number.
-    <input type = "text" id = "num1">
-    <button type = "button" onclick = "patOnBack()" required>Check</button>
-	<p id = "answer"></p>
-  </form>
-  
-	 
-  <h2>Links to my Other Applications</h2>
-	 <a href = "measureConverter-index.html">Length converter</a></n></n>
-	 <a href= "Volume_converter.html">Volume converter</a></n>
-	 <a href = "Weight-Converter.html"> Weight converter</a></n>
-	 <a href = "Temperature-Converter.html">Temperature converter</a><br><br>
-	 <a href = "Titiens Kitchen">Titiens Kitchen Catering</a>
-  <script type = "text/javascript">
-	
-  
-   var digit2 = Math.ceil(Math.random() *24);
-   function patOnBack(){
-	
-	var yourGuess = document.getElementById("num1").value;
-		if(yourGuess === ''){
-		document.getElementById('answer').innerHTML = 'You must enter a value!';
-		} else if(yourGuess < digit2){
-			document.getElementById('answer').innerHTML = yourGuess + ' is too low';
-		
-			}
-		else if(yourGuess > digit2){
-			document.getElementById('answer').innerHTML = yourGuess +   ' is too high';
-			
-	 }
-		else{ document.getElementById('answer').innerHTML = '';
-			
-			document.getElementById('answer').innerHTML = yourGuess + ' is correct!' + 
-			'<h1> YOU WIN!!</h1>';
-		
-		}
+		<input type="text" id="newNumber">
+		<button type = "button" onclick = "outputText()">Click Me</button>
+	</form>
+	<p id = "output"></p>
+	<p id = "loserCount"></p>
 
-	
-	}
-	
-	
+ <script>
+ 	var theTarget = Math.ceil(Math.random()*100);
+ 	
+ 	function outputText(){
+ 		var resultant = document.getElementById("output");
+ 		var guess = document.getElementById("newNumber").value;
+ 		var numGuesses = 1;
 
-   </script>
+ 		if (numGuesses != 10){
+ 			
 
- </body>
+ 			if(guess < theTarget){
+ 				resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is too low.</li>";
+ 				numGuesses = numGuesses + 1;
+
+ 			} else if(guess > theTarget){
+ 				resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is too high.</li>"
+ 				numGuesses = numGuesses + 1;
+ 			} else {
+ 				resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is correct <h1>YOU WIN!!</h1></li>";
+ 			numGuesses = numGuesses + 1;
+ 			}
+ 		} else {
+ 			resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is the maximum number of Guesses <h1>YOU LOSE!!</h1></li>"
+ }
+ }
+ </script>
+</body>
 </html>
