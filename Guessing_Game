@@ -38,7 +38,8 @@
  		} else {
  			resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is the maximum number of Guesses <h1>YOU LOSE!!</h1></li>"
  }
- }
+ }//Useless text
+ 
  </script>
 </body>
 </html>
