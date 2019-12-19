@@ -15,11 +15,12 @@
 
  <script>
  	var theTarget = Math.ceil(Math.random()*100);
- 	
+ 	var numGuesses = 0;
  	function outputText(){
+ 		
  		var resultant = document.getElementById("output");
  		var guess = document.getElementById("newNumber").value;
- 		var numGuesses = 1;
+ 		
 
  		if (numGuesses != 10){
  			
@@ -34,12 +35,16 @@
  			} else {
  				resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is correct <h1>YOU WIN!!</h1></li>";
  			numGuesses = numGuesses + 1;
+ 			return;
  			}
- 		} else {
- 			resultant.innerHTML = resultant.innerHTML + "<li>" + guess + " is the maximum number of Guesses <h1>YOU LOSE!!</h1></li>"
+ 		
+ 			
+ 	} else {
+ 		resultant.innerHTML= "You have reached the maximum number of attempts. <h1>YOU LOSE!!!</h1>";
+ 			return;
+ 	}
+
  }
- }//Useless text
- 
  </script>
 </body>
 </html>
