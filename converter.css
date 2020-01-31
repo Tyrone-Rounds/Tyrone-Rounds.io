@@ -2,6 +2,10 @@ form{
 	text-align: left;
 }
 
+h2{
+	text-decoration:blink;
+}
+
 h1{
 	text-align: center;
 	font-size: 40px;
