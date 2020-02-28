@@ -34,7 +34,7 @@ li a {
 	text-decoration: none;
 }
 
-li a:hover{
+li:hover{
 color:white;
 bacground-color: #f1f1f1f1;
 }
